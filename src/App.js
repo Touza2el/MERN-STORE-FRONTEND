@@ -9,7 +9,9 @@ const App = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const { data } = await axios('/api/products');
+      const { data } = await axios(
+        ' https://mern-store-app.herokuapp.com/api/products'
+      );
       setProducts(data);
     };
     fetchProducts();
